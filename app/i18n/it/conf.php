@@ -149,6 +149,10 @@ return array(
 		'image_url' => 'URL immagine',
 		'name' => 'Nome',
 		'no_filter' => 'Nessun filtro',
+		'no_queries' => array(
+			'_' => 'Nessuna ricerca personale è stata ancora inserita',
+			'help' => 'Leggi la <a href="https://freshrss.github.io/FreshRSS/en/users/user_queries.html" target="_blank">documentazione</a>',
+		),
 		'number' => 'Ricerca n°%d',
 		'order_asc' => 'Mostra prima gli articoli più vecchi',
 		'order_desc' => 'Mostra prima gli articoli più nuovi',

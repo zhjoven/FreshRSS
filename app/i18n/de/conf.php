@@ -149,6 +149,10 @@ return array(
 		'image_url' => 'Bild-URL',
 		'name' => 'Name',	// IGNORE
 		'no_filter' => 'Kein Filter',
+		'no_queries' => array(
+			'_' => 'Keine Benutzerabfrage vorhanden.',
+			'help' => 'Siehe <a href="https://freshrss.github.io/FreshRSS/en/users/user_queries.html" target="_blank">Dokumentation</a>',
+		),
 		'number' => 'Abfrage Nr. %d',
 		'order_asc' => 'Älteste Artikel zuerst anzeigen',
 		'order_desc' => 'Neueste Artikel zuerst anzeigen',
