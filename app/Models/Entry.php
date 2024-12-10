@@ -814,6 +814,22 @@ HTML;
 		if ($url === '' || $feed === null || $feed->pathEntries() === '') {
 			return '';
 		}
+		if (!empty($feed->attributeArray('path_entries_condition'))) {
+			$found = false;
+			foreach ($feed->attributeArray('path_entries_condition') as $condition) {
+				if (trim($condition) === '') {
+					continue;
+				}
+				$booleanSearch = new FreshRSS_BooleanSearch($condition);
+				if ($this->matches($booleanSearch)) {
+					$found = true;
+					break;
+				}
+			}
+			if (!$found) {
+				return '';
+			}
+		}
 
 		$cachePath = $feed->cacheFilename($url . '#' . $feed->pathEntries());
 		$html = httpGet($url, $cachePath, 'html', $feed->attributes(), $feed->curlOptions());
