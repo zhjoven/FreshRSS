@@ -667,7 +667,9 @@
 					<textarea class="w100" id="path_entries_condition" name="path_entries_condition"
 						rows="3" cols="64" spellcheck="false" placeholder="<?= _t('gen.short.blank_to_disable') ?>"><?php
 						foreach ($this->feed->attributeArray('path_entries_condition') ?? [] as $condition) {
-							echo htmlspecialchars($condition, ENT_NOQUOTES, 'UTF-8'), PHP_EOL;
+							if (is_string($condition)) {
+								echo htmlspecialchars($condition, ENT_NOQUOTES, 'UTF-8'), PHP_EOL;
+							}
 						}
 					?></textarea>
 					<p class="help"><?= _i('help') ?> <?= _t('sub.feed.filteractions.help') ?></p>

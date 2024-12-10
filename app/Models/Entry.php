@@ -817,7 +817,7 @@ HTML;
 		if (!empty($feed->attributeArray('path_entries_condition'))) {
 			$found = false;
 			foreach ($feed->attributeArray('path_entries_condition') as $condition) {
-				if (trim($condition) === '') {
+				if (!is_string($condition) || trim($condition) === '') {
 					continue;
 				}
 				$booleanSearch = new FreshRSS_BooleanSearch($condition);
