@@ -162,7 +162,7 @@ class FreshRSS_entry_Controller extends FreshRSS_ActionController {
 				}
 			}
 		} else {
-			/** @var array<numeric-string> $idArray */
+			/** @var list<numeric-string> $idArray */
 			$idArray = Minz_Request::paramArrayString('id');
 			$idString = Minz_Request::paramString('id');
 			if (count($idArray) > 0) {
@@ -177,7 +177,7 @@ class FreshRSS_entry_Controller extends FreshRSS_ActionController {
 			$tagsForEntries = $tagDAO->getTagsForEntries($ids) ?: [];
 			$tags = [];
 			foreach ($tagsForEntries as $line) {
-				$tags['t_' . $line['id_tag']][] = $line['id_entry'];
+				$tags['t_' . $line['id_tag']][] = (string)$line['id_entry'];
 			}
 			$this->view->tagsForEntries = $tags;
 		}

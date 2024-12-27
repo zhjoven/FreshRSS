@@ -170,8 +170,10 @@ class FreshRSS_index_Controller extends FreshRSS_ActionController {
 
 		$this->view->html_url = Minz_Url::display('', 'html', true);
 		$this->view->rss_title = FreshRSS_Context::$name . ' | ' . FreshRSS_View::title();
+
+		$queryString = $_SERVER['QUERY_STRING'] ?? '';
 		$this->view->rss_url = htmlspecialchars(
-			PUBLIC_TO_INDEX_PATH . '/' . (empty($_SERVER['QUERY_STRING']) ? '' : '?' . $_SERVER['QUERY_STRING']), ENT_COMPAT, 'UTF-8');
+			PUBLIC_TO_INDEX_PATH . '/' . ($queryString === '' || !is_string($queryString) ? '' : '?' . $queryString), ENT_COMPAT, 'UTF-8');
 
 		// No layout for RSS output.
 		$this->view->_layout(null);
@@ -216,7 +218,7 @@ class FreshRSS_index_Controller extends FreshRSS_ActionController {
 					Minz_Error::error(404);
 					return;
 				}
-				$this->view->categories = [ $cat->id() => $cat ];
+				$this->view->categories = [ $cat ];
 				break;
 			case 'f':
 				// We most likely already have the feed object in cache
@@ -229,7 +231,7 @@ class FreshRSS_index_Controller extends FreshRSS_ActionController {
 						return;
 					}
 				}
-				$this->view->feeds = [ $feed->id() => $feed ];
+				$this->view->feeds = [ $feed ];
 				break;
 			case 's':
 			case 't':
