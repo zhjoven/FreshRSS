@@ -23,20 +23,20 @@
 			<summary><?= _t('index.about.bug_reports.environment_information') ?></summary>
 			<dl>
 				<dt><?= _t('index.about.bug_reports.environment_information.version_frss') ?></dt>
-				<dd><?= FRESHRSS_VERSION ?></dd>
+				<dd><?= htmlspecialchars(FRESHRSS_VERSION, ENT_NOQUOTES, 'UTF-8') ?></dd>
 				<dt><?= _t('index.about.bug_reports.environment_information.version_php') ?></dt>
-				<dd><?= PHP_VERSION ?></dd>
+				<dd><?= htmlspecialchars(PHP_VERSION, ENT_NOQUOTES, 'UTF-8') ?></dd>
 				<dt><?= _t('index.about.bug_reports.environment_information.database') ?></dt>
-				<dd><?= FreshRSS_Context::systemConf()->db['type'] ?></dd>
+				<dd><?= htmlspecialchars(FreshRSS_Context::systemConf()->db['type'], ENT_NOQUOTES, 'UTF-8') ?></dd>
 				<?php $databaseDAO = FreshRSS_Factory::createDatabaseDAO(); ?>
-				<dd><?= $databaseDAO->version() ?></dd>
+				<dd><?= htmlspecialchars($databaseDAO->version(), ENT_NOQUOTES, 'UTF-8') ?></dd>
 				<dt><?= _t('index.about.bug_reports.environment_information.server_software') ?></dt>
 				<dd>
 					<?= is_string($_SERVER['SERVER_SOFTWARE'] ?? null) ? $_SERVER['SERVER_SOFTWARE'] : '' ?><br />
-					<?= php_uname('s') . ' ' . php_uname('r') . ' ' . php_uname('v') . ' ' . php_uname('m') ?>
+					<?= htmlspecialchars(php_uname('s') . ' ' . php_uname('r') . ' ' . php_uname('v') . ' ' . php_uname('m'), ENT_NOQUOTES, 'UTF-8') ?>
 				</dd>
 				<dt><?= _t('index.about.bug_reports.environment_information.browser') ?></dt>
-				<dd><?= is_string($_SERVER['HTTP_USER_AGENT'] ?? null) ? $_SERVER['HTTP_USER_AGENT'] : '' ?></dd>
+				<dd><?= is_string($_SERVER['HTTP_USER_AGENT'] ?? null) ? htmlspecialchars($_SERVER['HTTP_USER_AGENT'], ENT_NOQUOTES, 'UTF-8') : '' ?></dd>
 			</dl>
 		</details>
 	<?php } ?>
