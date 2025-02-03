@@ -20,6 +20,8 @@ See also [the FreshRSS releases](https://github.com/FreshRSS/FreshRSS/releases).
 	* Hide base theme in carrousel [#7234](https://github.com/FreshRSS/FreshRSS/pull/7234)
 * Deployment
 	* Reduce superfluous Docker builds [#7137](https://github.com/FreshRSS/FreshRSS/pull/7137)
+	* Docker default image (Debian 12 Bookworm) updated to PHP 8.2.26 and Apache 2.4.62
+	* Docker alternative image (Alpine 3.21) updated to PHP 8.3.16
 * UI
 	* Add footer icons to reader view [#7133](https://github.com/FreshRSS/FreshRSS/pull/7133)
 	* Remove local reference to font *Open Sans* to avoid bugs with some local versions [#7215](https://github.com/FreshRSS/FreshRSS/pull/7215)
@@ -38,10 +40,10 @@ Security
 		* Upgrade to PHPStan 2 [#7131](https://github.com/FreshRSS/FreshRSS/pull/7131), [#7164](https://github.com/FreshRSS/FreshRSS/pull/7164), [#7224](https://github.com/FreshRSS/FreshRSS/pull/7224),
 		[#7270](https://github.com/FreshRSS/FreshRSS/pull/7270), [#7281](https://github.com/FreshRSS/FreshRSS/pull/7281), [#7282](https://github.com/FreshRSS/FreshRSS/pull/7282)
 	* Update to CssXPath 1.3.0 (no change) [#7211](https://github.com/FreshRSS/FreshRSS/pull/7211)
-	* Update dev dependencies [#7165](https://github.com/FreshRSS/FreshRSS/pull/7165), [#7166](https://github.com/FreshRSS/FreshRSS/pull/7166), [#7167](https://github.com/FreshRSS/FreshRSS/pull/7167)
-	* Update GitHub Actions to Ubuntu 24.04 [#7207](https://github.com/FreshRSS/FreshRSS/pull/7207)
-	* Update dev dependencies [#7279](https://github.com/FreshRSS/FreshRSS/pull/7279), [#7280](https://github.com/FreshRSS/FreshRSS/pull/7280), [#7283](https://github.com/FreshRSS/FreshRSS/pull/7283),
+	* Update dev dependencies [#7165](https://github.com/FreshRSS/FreshRSS/pull/7165), [#7166](https://github.com/FreshRSS/FreshRSS/pull/7166), [#7167](https://github.com/FreshRSS/FreshRSS/pull/7167),
+		[#7279](https://github.com/FreshRSS/FreshRSS/pull/7279), [#7280](https://github.com/FreshRSS/FreshRSS/pull/7280), [#7283](https://github.com/FreshRSS/FreshRSS/pull/7283),
 		[#7284](https://github.com/FreshRSS/FreshRSS/pull/7284), [#7285](https://github.com/FreshRSS/FreshRSS/pull/7285)
+	* Update GitHub Actions to Ubuntu 24.04 [#7207](https://github.com/FreshRSS/FreshRSS/pull/7207)
 
 
 ## 2024-12-23 FreshRSS 1.25.0
