@@ -14,9 +14,9 @@ return array(
 	'auth' => array(
 		'allow_anonymous' => 'Permitir la lectura anónima de los artículos del usuario por defecto (%s)',
 		'allow_anonymous_refresh' => 'Permitir la actualización anónima de los artículos',
-		'api_enabled' => 'Concederle acceso a la <abbr>API</abbr> <small>(necesario para apps de móvil)</small>',
+		'api_enabled' => 'Concederle acceso a la <abbr>API</abbr> <small>(necesario para apps de móvil and sharing user queries)</small>',	// DIRTY
 		'form' => 'Formulario Web (el más habitual, requiere JavaScript)',
-		'http' => 'HTTP (para usuarios avanzados con HTTPS)',
+		'http' => 'HTTP (advanced: managed by Web server, OIDC, SSO…)',	// TODO
 		'none' => 'Ninguno (peligroso)',
 		'title' => 'Identificación',
 		'token' => 'Token de autentificación Master',
@@ -116,6 +116,7 @@ return array(
 		'description' => 'Descripción',
 		'disabled' => 'Desactivado',
 		'empty_list' => 'No hay extensiones instaladas',
+		'empty_list_help' => 'Check the logs to determine the reason behind the empty extension list.',	// TODO
 		'enabled' => 'Activado',
 		'latest' => 'Instalado',
 		'name' => 'Nombre',
@@ -147,8 +148,9 @@ return array(
 		'main_stream' => 'Salida principal',
 		'no_idle' => 'No hay fuentes inactivas',
 		'number_entries' => '%d artículos',
+		'overview' => 'Overview',	// TODO
 		'percent_of_total' => '% del total',
-		'repartition' => 'Reparto de artículos',
+		'repartition' => 'Reparto de artículos: %s',
 		'status_favorites' => 'Favoritos',
 		'status_read' => 'Leídos',
 		'status_total' => 'Total',	// IGNORE
